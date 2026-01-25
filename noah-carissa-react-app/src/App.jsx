@@ -26,8 +26,13 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p className="read-the-docs justify-content-between">
+        <button className='btn btn-primary'>Test Button</button>
+        <button className='btn btn-secondary'>Test Button</button>
+        <button className='btn btn-success'>Test Button</button>
+        <button className='btn btn-info'>Test Button</button>
+        <button className='btn btn-warning'>Test Button</button>
+        <button className='btn btn-danger'>Test Button</button>
       </p>
     </>
   )
