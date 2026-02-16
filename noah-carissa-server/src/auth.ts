@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { env } from "process"
+import nextConfig from "../next.config"
  
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -16,7 +17,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         // logic to verify if the user exists
         // user = await getUserFromDb(credentials.email, pwHash)
-        if (credentials.password == env["PASSWORD"])
+        // if (){
+
+        // }
+        if (nextConfig.env?.PASSWORD != null && credentials?.password == nextConfig.env.PASSWORD)
           user = {
             name: "Noah"
           }

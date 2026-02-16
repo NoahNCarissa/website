@@ -1,14 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { SignIn } from "./components/signin";
-import { auth } from "@/auth";
+import { auth, signOut } from "@/auth";
+import { SignOut } from "./components/signout";
+// import { stringify } from "querystring";
 
 export default async function Home() {
   const session = await auth();
 
   if (!session?.user) {
     // This shouldn't happen thanks to middleware, but good to have
-    return <div>Access denied</div>;
+    return <SignIn/>
   }
 
   return (
