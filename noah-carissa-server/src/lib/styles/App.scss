@@ -1,0 +1,21 @@
+$spicy-paprika: #CF5C36;
+$black-forest: #273B09;
+$papaya-whip: #FFECD1;
+$dusty-grape: #5B507A;
+$cinnamon-wood: #A9714B;
+$wisteria-blue: #8f95d3;
+$muted-teal: #7b9e87;
+$charcoal-blue: #3e4c5e;
+$goldenrod: #e8aa14;
+$happy-green: #3c5a14;
+
+$theme-colors: (
+  'primary': $black-forest,
+  'secondary': $cinnamon-wood,
+  'warning': $goldenrod,
+  'success': $happy-green,
+  'danger': $spicy-paprika,
+  'info': $wisteria-blue,
+);
+  
+@import 'bootstrap/scss/bootstrap.scss';
