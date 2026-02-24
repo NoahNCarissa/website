@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
+const path = require("path");
 import { env } from "process";
 
 const getPassword = () => {
   try {
-    return env["PASSWORD"];
+    return env["WEBSITE_PASSWORD"];
   } catch (ex) {
     console.log(ex);
     console.warn("No Password Configured!");
@@ -17,6 +18,10 @@ const nextConfig: NextConfig = {
   env: {
     PASSWORD: getPassword()
   },
+  sassOptions: {
+  //   implementation: 'sass',
+   loadPaths: [path.join(__dirname, "src/lib/styles"), path.join(__dirname, "node_modules/bootstrap/scss")]
+  }
 };
 
 export default nextConfig;
