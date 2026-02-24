@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { SignIn } from "./components/auth/signin";
 import { auth, signOut } from "@/auth";
-import { SignOut } from "./components/auth/signout";
-import Link from "next/link";
-import Navbar from "./components/nav/navbar";
-import chimneyRock from "/chimneyrock.jpg"
 // import { stringify } from "querystring";
 
 export default async function Home() {

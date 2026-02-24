@@ -12,8 +12,6 @@ const getPassword = () => {
   return "0000";
 }
 
-console.log(__dirname);
-
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
