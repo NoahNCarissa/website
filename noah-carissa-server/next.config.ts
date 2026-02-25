@@ -21,7 +21,8 @@ const nextConfig: NextConfig = {
   sassOptions: {
   //   implementation: 'sass',
    loadPaths: [path.join(__dirname, "src/lib/styles"), path.join(__dirname, "node_modules/bootstrap/scss")]
-  }
+  },
+  transpilePackages: ["next-auth"],
 };
 
 export default nextConfig;
