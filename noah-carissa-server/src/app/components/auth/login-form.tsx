@@ -4,7 +4,13 @@ import { useActionState } from 'react';
 import { authenticate } from '@/lib/actions';
 import { useSearchParams } from 'next/navigation';
 import { Button } from 'react-bootstrap';
- 
+import { auth } from '@/auth';
+import { SignIn } from '../sign-in';
+
+export function LoginProp(){
+  return <SignIn/>
+}
+
 export default function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams != null ? searchParams.get('callbackUrl') || '/info' : "/info";

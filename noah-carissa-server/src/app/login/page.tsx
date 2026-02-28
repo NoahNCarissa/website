@@ -1,4 +1,4 @@
-import LoginForm from '@/app/components/login-form';
+import LoginForm, { LoginProp } from '@/app/components/auth/login-form';
 import { Suspense } from 'react';
  
 export default function LoginPage() {

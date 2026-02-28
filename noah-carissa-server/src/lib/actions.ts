@@ -1,7 +1,8 @@
 'use server';
  
-import { signIn } from '@/auth';
+import { signIn, signOut } from '@/auth';
 import { AuthError } from 'next-auth';
+import { redirect } from 'next/dist/server/api-utils';
  
 export async function authenticate(
   prevState: string | undefined,
@@ -20,4 +21,12 @@ export async function authenticate(
     }
     throw error;
   }
+}
+
+export async function logout(
+  redirectTo: string|undefined,
+  redirect: true|undefined
+) {
+  "use server";
+  signOut({redirectTo, redirect});
 }

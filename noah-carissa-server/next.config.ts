@@ -12,6 +12,10 @@ const getPassword = () => {
   return "0000";
 }
 
+export const isDevelopment = () => {
+  return env?.ENVIRONMENT === "development";
+}
+
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
@@ -20,7 +24,8 @@ const nextConfig: NextConfig = {
   },
   sassOptions: {
   //   implementation: 'sass',
-   loadPaths: [path.join(__dirname, "src/lib/styles"), path.join(__dirname, "node_modules/bootstrap/scss")]
+    silenceDeprecations: ["*"],
+    loadPaths: [path.join(__dirname, "src/lib/styles"), path.join(__dirname, "node_modules/bootstrap/scss")]
   },
   transpilePackages: ["next-auth"],
 };
